@@ -2,16 +2,11 @@ import React, { useState } from "react";
 
 const DonutColorPicker = () => {
   const colors = [
-    { name: "Tomato", value: "#ff6b6b" },
-    { name: "Coral", value: "#ff8f66" },
-    { name: "Sunflower", value: "#ffcc33" },
-    { name: "Lime", value: "#7ed957" },
-    { name: "Teal", value: "#20c997" },
-    { name: "Sky", value: "#63c2ff" },
-    { name: "Violet", value: "#9b7cff" },
-    { name: "Plum", value: "#8b5cf6" },
-    { name: "Pink", value: "#ff6fb5" },
-    { name: "Graphite", value: "#344055" },
+    { name: "Crimson", value: "#DC14#C" },
+    { name: "SeaGreen", value: "#2E8B57" },
+    { name: "RoyalBlue", value: "#4169E1" },
+    { name: "Gold", value: "#FFD700" },
+    { name: "Plum", value: "#DDA0DD" },
   ];
 
   const [index, setIndex] = useState(0);
@@ -31,16 +26,7 @@ const DonutColorPicker = () => {
       }}
     >
       <svg viewBox="0 0 120 120" width="220" height="220">
-        {/* background ring */}
-        <circle
-          cx="60"
-          cy="60"
-          r="40"
-          fill="none"
-          stroke="#eee"
-          strokeWidth="22"
-        />
-        {/* colored donut */}
+        <circle cx="60" cy="60" r="40" fill="none" strokeWidth="22" />
         <circle
           cx="60"
           cy="60"
@@ -49,7 +35,6 @@ const DonutColorPicker = () => {
           stroke={currentColor.value}
           strokeWidth="22"
         />
-        {/* inner hole */}
         <circle cx="60" cy="60" r="20" fill="white" />
       </svg>
 
